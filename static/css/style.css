@@ -1,0 +1,73 @@
+/* Reset dei margini e dei padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Stili per il corpo della pagina */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Colore di sfondo */
+  color: #333; /* Colore del testo principale */
+}
+
+/* Stili per il contenitore principale */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Stili per il titolo principale */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000000; /* Blu */
+}
+
+/* Stili per il sottotitolo */
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #6c757d; /* Grigio */
+}
+
+/* Stili per l'input della città */
+.form-control {
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Stili per il pulsante di ricerca */
+.btn-primary {
+  border-radius: 30px;
+  font-size: 1.2rem;
+  background-color: #286aa7;
+  border-color: #286aa7; 
+  color: #f8f9fa;
+}
+
+/* Stili per la carta del meteo */
+.card {
+  background-color: #f8f9fa;
+  box-shadow: 0 8px 16px #0000001a;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* Stili per il titolo della carta */
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #332ba8; /* Rosso */
+}
+
+/* Stili per i dettagli del meteo */
+.card-text {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #343a40; /* Nero */
+}
