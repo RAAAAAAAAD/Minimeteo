@@ -8,6 +8,7 @@ var temp_max = document.querySelector('.temp_max');
 var temp_min = document.querySelector('.temp_min');
 var umidità = document.querySelector('.umidità');
 var velo_vento = document.querySelector('.velo_vento');
+var icon = document.querySelector('.icon');
 
 button.addEventListener('click', function(name){
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=50a7aa80fa492fa92e874d23ad061374&units=metric')
@@ -21,14 +22,16 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=5
   var tempminValue = data['main']['temp_min'];
   var umidiValue = data['main']['humidity'];
   var velo_ventoValue = data['wind']['speed'];
+  var weatherIcon = data['weather'][0]['icon'];
 
   main.innerHTML = nameValue;
   desc.innerHTML = "Desc - "+descValue;
-  temp.innerHTML = "Tempo - "+tempValue;
-  temp_max.innerHTML = "Temperatura Max -  "+tempmaxValue;
-  temp_min.innerHTML = "Temperatura Min -  "+tempminValue;
+  temp.innerHTML = "Tempo - "+tempValue+ "°C";
+  temp_max.innerHTML = "Temperatura Max -  "+tempmaxValue+ "°C";
+  temp_min.innerHTML = "Temperatura Min -  "+tempminValue+ "°C";
   umidità.innerHTML = "Umidità - "+umidiValue+'%';
   velo_vento.innerHTML = "Velocità vento -  "+velo_ventoValue;
+  icon.src = 'https://openweathermap.org/img/w/' + weatherIcon + '.png';
   input.value ="";
 
 })
